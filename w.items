@@ -1,0 +1,4 @@
+/* MQTT Sensors */
+Number Temperature_GF_Living "Temperature [%.1f °C]" <temperature> (Temperature, GF_Living) {mqtt="<[mosquitto:/sensor1/tem:state:default]";}
+Number Humidity_GF_Living "Humidity [%.1f %%]" <water> (Humidity, GF_Living) {mqtt="<[mosquitto:/sensor1/hum:state:default]";}
+Switch Light_GF_Living "Led" (GF_Living, Lights) {mqtt=">[mosquitto:/sensor1/led:command:on:on],>[mosquitto:/sensor1/led:command:off:off]";}
